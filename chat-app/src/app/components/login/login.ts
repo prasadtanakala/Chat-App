@@ -18,5 +18,8 @@ export class Login {
   loginbtn(){
     this.router.navigateByUrl('/register')
   }
+  homePagebtn(){
+    this.router.navigateByUrl('/home')
+  }
 
 }
