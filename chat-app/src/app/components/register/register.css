@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #42a5f5, #478ed1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.register-card {
+  width: 750px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+mat-card-header {
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1565c0;
+}
+
+mat-card-subtitle {
+  color: gray;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.row mat-form-field {
+  flex: 1;
+}
+
+.register-btn {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+@media(max-width:768px){
+
+.row{
+    flex-direction: column;
+    gap:0;
+}
+
+.register-card{
+    width:100%;
+}
+
+}

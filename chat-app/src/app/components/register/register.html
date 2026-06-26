@@ -1,1 +1,88 @@
-<p>register works!</p>
+<div class="register-container">
+  <mat-card class="register-card">
+
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+      <mat-card-subtitle>Create your account</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <!-- Full Name & Middle Name -->
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input matInput type="text" placeholder="Enter Full Name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Middle Name</mat-label>
+          <input matInput type="text" placeholder="Enter Middle Name">
+        </mat-form-field>
+      </div>
+
+      <!-- Last Name & Email -->
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput type="text" placeholder="Enter Last Name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Enter Email">
+           <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <!-- Password & Phone -->
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter Password">
+           <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="tel" placeholder="Enter Phone Number">
+           <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <!-- Gender & Job Role -->
+      <div class="row">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Gender</mat-label>
+          <mat-select>
+
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="others">Others</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Job Role</mat-label>
+          <mat-select>
+
+            <mat-option value="developer">Developer</mat-option>
+            <mat-option value="tester">Tester</mat-option>
+            <mat-option value="admin">Admin</mat-option>
+            <mat-option value="designer">Designer</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+      <button mat-raised-button color="primary" (click)="registerbtn()" class="register-btn">
+        Register
+      </button>
+
+    </mat-card-content>
+
+  </mat-card>
+</div>
