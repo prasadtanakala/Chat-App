@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',
-  imports: [MatIconModule,MatCardModule],
+  imports: [MatIconModule,MatCardModule,],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

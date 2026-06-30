@@ -38,7 +38,9 @@ mat-card-subtitle {
   gap: 20px;
   margin-bottom: 18px;
 }
-
+.registerbtn{
+  margin-top: 0px 20px;
+}
 .row mat-form-field {
   flex: 1;
 }

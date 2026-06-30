@@ -16,10 +16,10 @@ export class Login {
 
   router = inject(Router);
   loginbtn(){
-    this.router.navigateByUrl('/register')
+    // this.router.navigateByUrl('/home')
   }
-  homePagebtn(){
-    this.router.navigateByUrl('/home')
+  registerbtn(){
+    this.router.navigateByUrl('/register')
   }
 
 }

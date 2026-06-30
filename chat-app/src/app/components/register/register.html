@@ -8,16 +8,30 @@
 
     <mat-card-content>
 
-      <!-- Full Name & Middle Name -->
+   <div>
+    <form [formGroup]="registerForm">
+         <!-- Full Name & Middle Name -->
       <div class="row">
-        <mat-form-field appearance="outline">
-          <mat-label>Full Name</mat-label>
-          <input matInput type="text" placeholder="Enter Full Name">
-        </mat-form-field>
+     <mat-form-field appearance="outline">
+    <mat-label>Full Name</mat-label>
+
+    <input
+      matInput
+      formControlName="fullName"
+      placeholder="Enter Full Name">
+
+    @if (registerForm.get('fullName')?.hasError('required') &&
+         registerForm.get('fullName')?.touched) {
+
+      <mat-error>Full Name is required</mat-error>
+
+    }
+
+  </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Middle Name</mat-label>
-          <input matInput type="text" placeholder="Enter Middle Name">
+          <input matInput type="text" formControlName="middleName" placeholder="Enter Middle Name">
         </mat-form-field>
       </div>
 
@@ -25,13 +39,24 @@
       <div class="row">
         <mat-form-field appearance="outline">
           <mat-label>Last Name</mat-label>
-          <input matInput type="text" placeholder="Enter Last Name">
+          <input matInput type="text" formControlName="lastName" placeholder="Enter Last Name">
+            @if (registerForm.get('lastName')?.hasError('required') &&
+         registerForm.get('lastName')?.touched) {
+
+      <mat-error>lastName Name is required</mat-error>
+
+    }
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput type="email" placeholder="Enter Email">
+          <input matInput type="email" formControlName="email" placeholder="Enter Email">
            <mat-icon matSuffix>email</mat-icon>
+          @if (registerForm.get('email')?.hasError('required') &&
+         registerForm.get('email')?.touched) {
+
+      <mat-error>email is required</mat-error>
+         }
         </mat-form-field>
       </div>
 
@@ -39,14 +64,22 @@
       <div class="row">
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="Enter Password">
+          <input matInput type="password" formControlName="password" placeholder="Enter Password">
            <mat-icon matSuffix>lock</mat-icon>
+        @if (registerForm.get('password')?.hasError('required') &&
+         registerForm.get('password')?.touched) {
+         <mat-error>password is required</mat-error>
+         }
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Phone Number</mat-label>
-          <input matInput type="tel" placeholder="Enter Phone Number">
+          <input matInput type="tel" formControlName="phone" placeholder="Enter Phone Number">
            <mat-icon matSuffix>phone</mat-icon>
+            @if (registerForm.get('phone')?.hasError('required') &&
+         registerForm.get('phone')?.touched) {
+         <mat-error>phone number is required</mat-error>
+         }
         </mat-form-field>
       </div>
 
@@ -55,7 +88,7 @@
 
         <mat-form-field appearance="outline">
           <mat-label>Gender</mat-label>
-          <mat-select>
+          <mat-select formControlName="gender">
 
             <mat-option value="male">Male</mat-option>
             <mat-option value="female">Female</mat-option>
@@ -66,7 +99,7 @@
 
         <mat-form-field appearance="outline">
           <mat-label>Job Role</mat-label>
-          <mat-select>
+          <mat-select formControlName="jobrole">
 
             <mat-option value="developer">Developer</mat-option>
             <mat-option value="tester">Tester</mat-option>
@@ -81,6 +114,8 @@
       <button mat-raised-button color="primary" (click)="registerbtn()" class="register-btn">
         Register
       </button>
+    </form>
+   </div>
 
     </mat-card-content>
 
