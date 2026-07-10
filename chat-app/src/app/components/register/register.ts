@@ -47,4 +47,7 @@ constructor(private fb : FormBuilder){
       this.router.navigate(['/login']);
     }
   }
+  btn1(){
+    this.router.navigate([''])
+  }
 }
